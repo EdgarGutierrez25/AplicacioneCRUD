@@ -1,0 +1,36 @@
+<%- include('templates/Header')%>
+<%- include('templates/Menu')%>
+
+<div class='row mt-5' >
+    <div class='col-2'></div>
+    <div class='col-8'>
+        <div class='card' style="background-color:#00b347;">
+            <div class='card-header' >
+                <h1>Noticias</h1>
+            </div>
+            <div class='card-body' align='center' >
+                        <%
+                            noticia.forEach((noticia)=>{      
+                        %>
+                        <div class="card" style="width: 18rem;" class='align-middle'>
+                            <img src="<%= noticia.foto%>" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title"><%= noticia.titulo%></h5>
+                              <p class="card-text"><%= noticia.descripcion%></p>
+                              <p class="card-text"><%= noticia.fecha%></p>
+                              <a href="<%= noticia.link%>" class="btn btn-primary">Leer completo</a>
+                            </div>
+                          </div>
+                        <%
+                        })
+                        %>
+            </div><br>
+            <div class='card-footer'>
+
+            </div>
+        </div>
+    </div>
+    <div class='col-2'></div>
+</div>
+
+<%- include('templates/Pagefeet')%>

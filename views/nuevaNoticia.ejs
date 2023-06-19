@@ -1,0 +1,29 @@
+<%- include('templates/Header')%>
+<%- include('templates/Menu')%>
+
+<div class="row mt-5" >
+    <div class="col-2"></div>
+    <div class="col-8">
+        <form action="/nuevo" method='POST'>
+           <div class='card' style="background-color:#00b347;">
+               <div class='card-header'>
+                    <h1>Postear noticia</h1>
+                </div>
+               <div class='card-body'>
+                    <input class="form-control mbt-3" type='text' name='titulo' id='titulo' placeholder="Titulo">
+                    <input class="form-control mbt-3" type='text' name='descripcion' id='descripcion' placeholder="Descripcion">
+                    <input class="form-control mbt-3" type='date' name='fecha' id='fecha' placeholder="Fecha de posteo">
+                    <input class="form-control mbt-3" type='text' name='foto' id='foto' placeholder="Foto">
+                    <input class="form-control mbt-3" type='text' name='link' id='link' placeholder="Link de la noticia">
+                </div>
+               <div class='card-footer'>
+                   <button class='btn btn-primary col-12 mb-3' type='submit'>Postear noticia</button>
+                   <a class='btn btn-secondary col-12' href='/opciones'>Cancelar</a>
+               </div>
+           </div>    
+        </form>
+    </div>
+    <div class="col-2"></div>
+</div>
+
+<%- include('templates/Pagefeet')%>
